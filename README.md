@@ -11,7 +11,10 @@ Install i3 window manager by running the following command depending on your dis
 Log out and log in to i3 by selecting i3 from your display manager.
 Select the super key as your mod key when prompted
 
-Press `super key + Enter` to enter the terminal
+Press `super key + Enter` to enter the terminal, then reboot the system by typing `reboot`
+Now, enter your gui env. like gnome or kde for now 
+
+~ (we will configure it first before starting)
 
 - Install rofi by running the following command depending on your distribution:
    - For Ubuntu or Debian: `sudo apt install rofi`
@@ -88,8 +91,8 @@ Install Dunst notification daemon by running the appropriate command for your Li
 
 - Create the configuration file for Dunst by running the following commands in your terminal:
 
-- `mkdir -p ~/.config/dunst`
-- `touch ~/.config/dunst/dunstrc`
+    - `mkdir -p ~/.config/dunst`
+    - `touch ~/.config/dunst/dunstrc`
 
 - Paste the following content into the dunstrc file:
 
@@ -116,5 +119,8 @@ Launch Dunst by running the following command in your terminal:
     dunst &
 
 ## Reboot your system
-
+- enter i3 by selecting it from your display manager
+  
 That's it! You should now have a fully functional i3 setup with Rofi, Polybar, and Dunst running smoothly.
+
+`go through the config file in this repo for all the keybinds and shortcuts`
