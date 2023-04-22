@@ -54,10 +54,6 @@ Copy the Rofi files from this repository to your Rofi configuration directory (`
 
     cp rofi/* ~/.config/rofi/
 
-Copy the i3 configuration file from this repository to your i3 configuration directory (`~/.config/i3/config`) by executing the following command in the installed directory:
-
-    cp i3/config ~/.config/i3/
-
 - Install Lxappearance by running the following command depending on your distribution:
     - For Ubuntu or Debian: `sudo apt install lxappearance`
     - For Fedora: `sudo dnf install lxappearance`
@@ -89,30 +85,13 @@ Install Dunst notification daemon by running the appropriate command for your Li
    - For Fedora: `sudo dnf install dunst`
    - For Arch Linux: `sudo pacman -S dunst`
 
-- Create the configuration file for Dunst by running the following commands in your terminal:
+Install picom by running the appropriate command for your Linux distribution:
+   - For Ubuntu or Debian: `sudo apt install picom`
+   - For Fedora: `sudo dnf install picom`
+   - For Arch Linux: `sudo pacman -S picom`
 
-    - `mkdir -p ~/.config/dunst`
-    - `touch ~/.config/dunst/dunstrc`
-
-- Paste the following content into the dunstrc file:
-
-        font = DejaVu Sans Mono:size=10
-
-        command = dunstify
-
-        monitor = 0
-
-        geometry = "500x1-1+40"
-
-        shrink = no
-
-        transparency = yes
-
-        background = "#282c34"
-
-        foreground = "#e5c07b"
-
-        format = "%s"
+Optional: 
+- Copy the dunst & picom configuration folder from this repository to your i3 configuration directory (`~/.config/`)
 
 Launch Dunst by running the following command in your terminal:
 

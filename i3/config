@@ -55,9 +55,9 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id /home/coffee-plz/.config/rofi/launchers/type-1/launcher.sh
-bindsym $mod+Shift+s exec --no-startup-id /home/coffee-plz/.config/rofi/applets/bin/screenshot.sh
-bindsym $mod+p exec --no-startup-id /home/coffee-plz/.config/rofi/powermenu/type-3/powermenu.sh
+bindsym $mod+d exec --no-startup-id /home/coffee-plz/.config/polybar/hack/scripts/launcher.sh
+bindsym $mod+Shift+s exec --no-startup-id gnome-screenshot
+bindsym $mod+p exec --no-startup-id /home/coffee-plz/.config/polybar/hack/scripts/powermenu.sh
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -73,7 +73,7 @@ bindsym $mod+Shift+i exec webstorm # Webstorm
 bindsym $mod+g exec flatpak run io.github.shiftey.Desktop # Github
 bindsym $mod+Shift+w exec libreoffice --writer # LibreOffice Writer
 bindsym $mod+c exec gnome-calculator # Calculator
-bindsym $mod+Shift+n exec nvim # Notepad
+bindsym $mod+Shift+n exec gedit # Notepad
 bindsym $mod+Shift+Escape exec gnome-control-center # Settings
 bindsym $mod+Shift+m exec gnome-system-monitor # Task Manager
 
@@ -216,5 +216,30 @@ bar {
 #        status_command i3status
 }
 
+#autostarts
 exec_always nitrogen --restore
-exec_always --no-startup-id exec bash ~/.config/polybar/launch.sh --grayblocks
+exec_always --no-startup-id exec bash ~/.config/polybar/launch.sh --hack
+exec --no-startup-id picom
+
+
+# Define colors variables:
+set $darkbluetrans	#08052be6
+set $darkblue		#08052b
+set $lightblue		#5294e2
+set $urgentred		#e53935
+set $white		#ffffff
+set $black		#000000
+set $purple		#e345ff
+set $darkgrey		#383c4a
+set $grey #878787	
+set $mediumgrey		#8b8b8b
+set $yellowbrown	#e1b700
+set $cyan #00dede
+set $warm #ebdbb2
+
+# define colors for windows:
+#class		            	border		bground		text		indicator	child_border
+client.focused		    	$lightblue	$darkblue	$white		$warm   	$warm
+client.unfocused	    	$darkblue	$darkblue	$grey		$grey	$grey
+client.focused_inactive		$darkblutrans	$darkblue	$grey	$grey		$grey
+client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
