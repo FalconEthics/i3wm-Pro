@@ -42,17 +42,9 @@ Clone the Rofi themes themes Git repository and run its setup script by executin
     - `chmod +x setup.sh`
     - `./setup.sh`
 
-Copy the Polybar files from this repository to your Polybar configuration directory (`~/.config/polybar/`) by executing the following command in the installed directory:
-
-    cp polybar/* ~/.config/polybar/
-
 Launch Polybar with the "grayblocks" theme by running the following command:
 
     bash ~/.config/polybar/launch.sh --grayblocks
-
-Copy the Rofi files from this repository to your Rofi configuration directory (`~/.config/rofi`) by executing the following command in the installed directory:
-
-    cp rofi/* ~/.config/rofi/
 
 - Install Lxappearance by running the following command depending on your distribution:
     - For Ubuntu or Debian: `sudo apt install lxappearance`
@@ -90,8 +82,9 @@ Install picom by running the appropriate command for your Linux distribution:
    - For Fedora: `sudo dnf install picom`
    - For Arch Linux: `sudo pacman -S picom`
 
-Optional: 
-- Copy the dunst & picom configuration folder from this repository to your i3 configuration directory (`~/.config/`)
+Important: 
+- Copy the i3, dunst & picom configuration folder from this repository to your i3 configuration directory (`~/.config/`)
+- Now edit the `i3/config` file and replace all the occurances of `coffee-plz` in the file with your unix username (the one that shows up in your terminal)
 
 Launch Dunst by running the following command in your terminal:
 
