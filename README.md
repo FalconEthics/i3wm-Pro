@@ -83,7 +83,7 @@ Install picom by running the appropriate command for your Linux distribution:
    - For Arch Linux: `sudo pacman -S picom`
 
 Important: 
-- Copy the i3, dunst & picom configuration folder from this repository to your i3 configuration directory (`~/.config/`)
+- Copy the i3, dunst & picom configuration folder from this repository to your configuration directory (`~/.config/`)
 - Now edit the `i3/config` file and replace all the occurances of `coffee-plz` in the file with your unix username (the one that shows up in your terminal)
 
 Launch Dunst by running the following command in your terminal:
